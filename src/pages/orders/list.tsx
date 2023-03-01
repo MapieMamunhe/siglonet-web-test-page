@@ -20,6 +20,7 @@ import InputField from "@/components/InputField";
 import TextField from "@mui/material/TextField";
 import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
+import { randomUUID } from "crypto";
 // import { Container } from './styles';
 
 const OrdersList: React.FC = () => {
@@ -60,6 +61,38 @@ const OrdersList: React.FC = () => {
     },
   ]);
   const [search, setSearch] = useState("");
+  const [orders, setOrders] = useState([
+    {
+      date: "DD/MM/YYYY",
+      status: "status",
+      quantity: "Quantity",
+      value: "Value",
+    },
+    {
+      date: "DD/MM/YYYY",
+      status: "status",
+      quantity: "Quantity",
+      value: "Value",
+    },
+    {
+      date: "DD/MM/YYYY",
+      status: "status",
+      quantity: "Quantity",
+      value: "Value",
+    },
+    {
+      date: "DD/MM/YYYY",
+      status: "status",
+      quantity: "Quantity",
+      value: "Value",
+    },
+    {
+      date: "DD/MM/YYYY",
+      status: "status",
+      quantity: "Quantity",
+      value: "Value",
+    },
+  ]);
   return (
     <body className="bg-white h-screen">
       <header>
@@ -74,10 +107,10 @@ const OrdersList: React.FC = () => {
         </nav>
       </header>
       <main className="grid grid-cols-5">
-        <section className="grid">
+        <section className="flex flex-col">
           <div
-            className="mx-2 flex flex-row justify-between
-            my-2
+            className="mx-2 h-fit flex flex-row justify-between
+            py-5 mb-0
           "
           >
             <Input
@@ -102,7 +135,38 @@ const OrdersList: React.FC = () => {
               <Sort />
             </button>
           </div>
-          <ul></ul>
+          <ul className="flex flex-col">
+            {orders.map((order) => {
+              return (
+                <button
+                  key={order.value}
+                  type="button"
+                  className="hover:bg-slate-700 hover:text-white
+                        hover:font-light"
+                >
+                  <li
+                    className="border-t-2 
+                      border-slate-500"
+                  >
+                    <div
+                      className="flex justify-between mx-2
+                         font-semibold text-md"
+                    >
+                      <span>{order.date}</span>
+                      <span>{order.value}</span>
+                    </div>
+                    <div
+                      className="flex justify-between mx-2 
+                        text-xs text-slate-500 hover:text-white"
+                    >
+                      <span>{order.status}</span>
+                      <span>{order.quantity}</span>
+                    </div>
+                  </li>
+                </button>
+              );
+            })}
+          </ul>
         </section>
         <section className="col-span-4 px-5">
           {/* O header do Order notes */}
