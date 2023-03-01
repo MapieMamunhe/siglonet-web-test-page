@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Table from "@mui/material/Table";
+import TableAutoComplete from "@mui/material/Autocomplete";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { CalendarMonth, Place, Tag, Functions } from "@mui/icons-material";
-
+import {
+  CalendarMonth,
+  Place,
+  Tag,
+  Functions,
+  Search,
+  Sort,
+} from "@mui/icons-material";
+import InputField from "@/components/InputField";
+import TextField from "@mui/material/TextField";
+import Input from "@mui/material/Input";
+import InputAdornment from "@mui/material/InputAdornment";
 // import { Container } from './styles';
 
 const OrdersList: React.FC = () => {
@@ -48,6 +59,7 @@ const OrdersList: React.FC = () => {
       value: "4",
     },
   ]);
+  const [search, setSearch] = useState("");
   return (
     <body className="bg-white h-screen">
       <header>
@@ -61,9 +73,38 @@ const OrdersList: React.FC = () => {
           </ul>
         </nav>
       </header>
-      <main className="grid grid-cols-4">
-        <section className="grid"></section>
-        <section className="col-span-3 px-5">
+      <main className="grid grid-cols-5">
+        <section className="grid">
+          <div
+            className="mx-2 flex flex-row justify-between
+            my-2
+          "
+          >
+            <Input
+              id="input-with-icon-adornment"
+              value={search}
+              className=" h-10 
+            rounded-md border-solid mr-4"
+              onChange={(e) => {
+                setSearch(e.currentTarget.value);
+              }}
+              endAdornment={
+                <InputAdornment position="start">
+                  <Search />
+                </InputAdornment>
+              }
+            />
+            <button
+              type="button"
+              className="p-2 rounded-lg 
+            border-2 border-slate-500 h-fit"
+            >
+              <Sort />
+            </button>
+          </div>
+          <ul></ul>
+        </section>
+        <section className="col-span-4 px-5">
           {/* O header do Order notes */}
           <section className="font-bold flex justify-between py-5 ">
             <p className="">Order Notes</p>
@@ -109,11 +150,11 @@ const OrdersList: React.FC = () => {
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                   <TableHead>
                     <TableRow>
-                      <TableCell>Dessert (100g serving)</TableCell>
-                      <TableCell align="right">Calories</TableCell>
-                      <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                      <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                      <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                      <TableCell>NAME</TableCell>
+                      <TableCell align="right">BARCODE</TableCell>
+                      <TableCell align="right">MAKE</TableCell>
+                      <TableCell align="right">IMEI NO.</TableCell>
+                      <TableCell align="right">PRICE</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody></TableBody>
