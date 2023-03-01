@@ -22,7 +22,7 @@ export default function Home() {
       <main className="h-screen">
         <div className=" grid place-items-center">
           <form
-            className="w-3/4 bg-white p-20 rounded-md h-5/6 pb-24"
+            className="w-3/4 md:w-fit bg-white p-20 rounded-md h-5/6 pb-24"
             action="#"
           >
             <div className="mb-10 flex flex-col justify-center">
