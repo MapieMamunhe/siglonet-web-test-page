@@ -20,23 +20,21 @@ export function SearchOrdersComponent(props: props) {
         <Input
           id="input-with-icon-adornment"
           value={props.search}
-          className=" h-10 
-            rounded-md border-solid mr-4"
+          className=""
           onChange={(e) => {
             props.setSearch(e.currentTarget.value);
           }}
           endAdornment={
             <InputAdornment position="start">
-              <Search />
+              <Search htmlColor="#CECECE" />
             </InputAdornment>
           }
         />
-        <button
-          type="button"
-          className="p-2 rounded-lg 
-            border-2 border-slate-500 h-fit"
-        >
-          <Sort />
+        <button type="button" className="">
+          <Sort
+            htmlColor="#CECECE"
+            className="border border-1 h-12 w-12 rounded-md"
+          />
         </button>
       </div>
       <ul className="flex flex-col">
@@ -45,23 +43,22 @@ export function SearchOrdersComponent(props: props) {
             <button
               key={order.value}
               type="button"
-              className="hover:bg-slate-700 hover:text-white
+              className="hover:bg-[#37404F] 
+              border-t-2 border-[#E4E4E4]
+              font-sans py-5 hover:text-white
                         hover:font-light"
             >
-              <li
-                className="border-t-2 
-                      border-slate-500"
-              >
+              <li>
                 <div
                   className="flex justify-between mx-2
-                         font-semibold text-md"
+                         font-semibold text-md mb-2"
                 >
                   <span>{order.date}</span>
                   <span>{order.value}</span>
                 </div>
                 <div
                   className="flex justify-between mx-2 
-                        text-xs text-slate-500 hover:text-white"
+                        text-s text-[#9098A6] hover:text-white"
                 >
                   <span>{order.status}</span>
                   <span>{order.quantity}</span>

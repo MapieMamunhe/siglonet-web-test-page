@@ -14,7 +14,7 @@ type props = {
 };
 export function OrderInfoComponent(props: props) {
   return (
-    <section id="hero" className="bg-zinc-500 p-5 h-full">
+    <section id="hero" className="bg-[#F4F6F6] p-5 h-full">
       <div className="bg-white px-5">
         <div
           className="flex 
@@ -35,7 +35,7 @@ export function OrderInfoComponent(props: props) {
               return (
                 <li
                   key={item.title}
-                  className="bg-zinc-500 py-5 flex flex-col font-semibold"
+                  className="bg-[#F8F8F8] py-5 flex flex-col font-semibold"
                 >
                   <span className="pl-7 flex justify-between pr-2">
                     <span className="text-gray-400 ">{item.title}</span>
