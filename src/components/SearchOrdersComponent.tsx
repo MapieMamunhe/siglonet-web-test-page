@@ -6,7 +6,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 // import { Container } from './styles';
 type props = {
-  search: unknown;
+  search: string;
   setSearch: (arg0: string) => void;
   orders: any[];
 };

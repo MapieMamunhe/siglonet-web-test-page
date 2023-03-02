@@ -10,7 +10,7 @@ import SearchOrdersComponent from "../../components/SearchOrdersComponent";
 import NavLinksComponent from "./NavLinksComponent";
 
 const OrdersList: React.FC = () => {
-  const [otherPages, setOtherPages] = useState([
+  const [otherPages, setOtherPages] = useState<navLinkProps[]>([
     {
       name: "Inventory",
       link: "inventory/list",
@@ -93,7 +93,7 @@ const OrdersList: React.FC = () => {
   ]);
   return (
     <body className="bg-white h-screen">
-      <NavLinksComponent otherPages={otherPages} />
+      <NavLinksComponent pages={otherPages} />
       <main className="grid grid-cols-5">
         <SearchOrdersComponent
           search={search}

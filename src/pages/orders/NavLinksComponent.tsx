@@ -1,13 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import { AccountCircle } from "@mui/icons-material";
-type props = { otherPages: any[] };
-export default function NavLinksComponent(props: props) {
+export default function NavLinksComponent({
+  pages,
+}: {
+  pages: navLinkProps[];
+}) {
   return (
     <header>
       <nav className="border-b-2 border-solid border-[#CECECE] grid grid-cols-5">
         <ul className="flex justify-end col-span-3">
-          {props.otherPages.map((page) => (
+          {pages.map((page) => (
             <Link href={page.link} key={page.name}>
               <li
                 className={
