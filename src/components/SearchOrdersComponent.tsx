@@ -14,12 +14,11 @@ type props = {
 export default function SearchOrdersComponent(props: props) {
   return (
     <section className="flex flex-col">
-      <div className="flex my-3 ml-4">
+      <div className="flex my-3 ml-4 ">
         <TextField
           id="outlined-search"
           label="Search"
           type="search"
-          className="mr-2"
           size="small"
           value={props.search}
           onChange={(e) => {
@@ -34,7 +33,10 @@ export default function SearchOrdersComponent(props: props) {
           }}
         />
 
-        <button type="button" className="h-10 w-12 border border-1 rounded-md">
+        <button
+          type="button"
+          className="ml-2 h-10 w-12 border border-1 rounded-md"
+        >
           <Sort htmlColor="#CECECE" className="" />
         </button>
       </div>
