@@ -93,6 +93,15 @@ const OrdersList: React.FC = () => {
       value: "Value",
     },
   ]);
+  const [products, setProducts] = useState([
+    {
+      name: "Prod1",
+      barcode: "XXXXXX",
+      make: "YYYYYY",
+      imei: "111111",
+      price: "AAAAAA",
+    },
+  ]);
   return (
     <body className="bg-white h-screen">
       <header>
@@ -221,7 +230,31 @@ const OrdersList: React.FC = () => {
                       <TableCell align="right">PRICE</TableCell>
                     </TableRow>
                   </TableHead>
-                  <TableBody></TableBody>
+                  <TableBody>
+                    {products.map((product) => (
+                      <TableRow
+                        key={product.name}
+                        sx={{
+                          "&:last-child td, &:last-child th": { border: 0 },
+                        }}
+                      >
+                        <TableCell component="th" scope="row">
+                          {product.name}
+                        </TableCell>
+                        <TableCell align="right">{product.barcode}</TableCell>
+                        <TableCell align="right">{product.make}</TableCell>
+                        <TableCell align="right">{product.imei}</TableCell>
+                        <TableCell align="right">{product.price}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                  <caption className="flex justify-between w-full">
+                    <span>Account: Person Name</span>
+                    <div>
+                      <span>Total:</span>
+                      <span>R:00000</span>
+                    </div>
+                  </caption>
                 </Table>
               </TableContainer>
             </div>
