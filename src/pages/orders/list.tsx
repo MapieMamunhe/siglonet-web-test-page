@@ -93,7 +93,7 @@ const OrdersList: React.FC = () => {
     },
   ]);
   return (
-    <body className="bg-white h-screen">
+    <div className="bg-white h-screen">
       <NavLinksComponent pages={otherPages} />
       <main className="grid grid-cols-5">
         <SearchOrdersComponent
@@ -115,7 +115,7 @@ const OrdersList: React.FC = () => {
           <OrderInfoComponent mainInfo={mainInfo} products={products} />
         </section>
       </main>
-    </body>
+    </div>
   );
 };
 

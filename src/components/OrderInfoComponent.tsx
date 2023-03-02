@@ -61,11 +61,19 @@ export default function OrderInfoComponent(props: props) {
           >
             <TableHead>
               <TableRow>
-                <TableCell>NAME</TableCell>
-                <TableCell align="right">BARCODE</TableCell>
-                <TableCell align="right">MAKE</TableCell>
-                <TableCell align="right">IMEI NO.</TableCell>
-                <TableCell align="right">PRICE</TableCell>
+                <TableCell className=" text-[#9098A6]">NAME</TableCell>
+                <TableCell className=" text-[#9098A6]" align="right">
+                  BARCODE
+                </TableCell>
+                <TableCell className=" text-[#9098A6]" align="right">
+                  MAKE
+                </TableCell>
+                <TableCell className=" text-[#9098A6]" align="right">
+                  IMEI NO.
+                </TableCell>
+                <TableCell className=" text-[#9098A6]" align="right">
+                  PRICE
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
