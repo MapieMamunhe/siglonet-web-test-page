@@ -24,7 +24,7 @@ export function OrderInfoComponent(props: props) {
             "
         >
           <span>Order Info</span>
-          <select name="status" id="status">
+          <select className="border-2 px-6 rounded" name="status" id="status">
             <option value="">Status</option>
           </select>
         </div>
