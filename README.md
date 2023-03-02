@@ -5,8 +5,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 ### First
- - install dependencies using ```npm install``` inside of the project directory
- - run the development server ```npm run dev```
+
+- install dependencies using `npm install` inside of the project directory
+- run the development server `npm run dev`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -14,7 +15,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-
 ## View Online
 
 You can check out [this page here](https://siglonet-web-test-page.vercel.app/)!
+
+## This are the Design which the project was built upon
+
+![Alt text](./Sign%20In%20Page.png "Login")
+![Alt text](./Order%20Main.png "Orders")
