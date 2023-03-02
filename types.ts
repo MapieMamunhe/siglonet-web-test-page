@@ -1,4 +1,4 @@
-type navLinkProps = {
+export type navLinkProps = {
   name: string;
   link: string;
   active: boolean;

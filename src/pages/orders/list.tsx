@@ -8,6 +8,7 @@ import { randomUUID } from "crypto";
 import OrderInfoComponent from "../../components/OrderInfoComponent";
 import SearchOrdersComponent from "../../components/SearchOrdersComponent";
 import NavLinksComponent from "./NavLinksComponent";
+import { navLinkProps } from "types";
 
 const OrdersList: React.FC = () => {
   const [otherPages, setOtherPages] = useState<navLinkProps[]>([

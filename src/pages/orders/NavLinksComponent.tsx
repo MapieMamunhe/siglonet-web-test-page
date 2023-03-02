@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { AccountCircle } from "@mui/icons-material";
+import { navLinkProps } from "types";
 export default function NavLinksComponent({
   pages,
 }: {
