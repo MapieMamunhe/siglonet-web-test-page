@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import TableAutoComplete from "@mui/material/Autocomplete";
-import { CalendarMonth, Place, Tag, Functions } from "@mui/icons-material";
+import { CalendarMonth, Place, Tag, Functions, Add } from "@mui/icons-material";
 import InputField from "@/components/InputField";
 import TextField from "@mui/material/TextField";
 import { randomUUID } from "crypto";
@@ -102,7 +102,9 @@ const OrdersList: React.FC = () => {
           <section className="font-bold flex justify-between py-5 ">
             <p className="">Order Notes</p>
             <Link href="/">
-              <span className="border rounded-md p-2">New Order Note</span>
+              <span className="border-2 border-black rounded-md p-2">
+                <Add /> New Order Note
+              </span>
             </Link>
           </section>
           {/* Order Info */}
