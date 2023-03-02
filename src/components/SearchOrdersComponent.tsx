@@ -12,15 +12,11 @@ type props = {
 export function SearchOrdersComponent(props: props) {
   return (
     <section className="flex flex-col">
-      <div
-        className="mx-2 h-fit flex flex-row justify-between
-            py-5 mb-0
-          "
-      >
+      <div className="flex my-4 ml-4">
         <Input
           id="input-with-icon-adornment"
           value={props.search}
-          className=""
+          className="w-3/4 mr-auto border-2 border-[#CECECE] border-solid rounded-md"
           onChange={(e) => {
             props.setSearch(e.currentTarget.value);
           }}
