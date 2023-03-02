@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen">
+      <main className="h-screen bg-[#9098a6]">
         <div className=" grid place-items-center">
           <form
             className="w-3/4 md:w-fit bg-white p-20 rounded-md h-5/6 pb-24"
