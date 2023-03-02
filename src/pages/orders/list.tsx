@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 import { randomUUID } from "crypto";
 import OrderInfoComponent from "../../components/OrderInfoComponent";
 import SearchOrdersComponent from "../../components/SearchOrdersComponent";
-import NavLinksComponent from "./NavLinksComponent";
+import NavLinksComponent from "../../components/NavLinksComponent";
 import { navLinkProps } from "types";
 
 const OrdersList: React.FC = () => {
