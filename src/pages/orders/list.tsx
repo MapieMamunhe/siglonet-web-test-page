@@ -14,14 +14,17 @@ const OrdersList: React.FC = () => {
     {
       name: "Inventory",
       link: "inventory/list",
-    },
-    {
-      name: "Vouchers",
-      link: "vouchers/list",
+      active: false,
     },
     {
       name: "Orders",
       link: "inventory/list",
+      active: true,
+    },
+    {
+      name: "Vouchers",
+      link: "vouchers/list",
+      active: false,
     },
   ]);
   const [mainInfo, setMainInfo] = useState([

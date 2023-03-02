@@ -5,11 +5,18 @@ type props = { otherPages: any[] };
 export function NavLinksComponent(props: props) {
   return (
     <header>
-      <nav className="border-b-2 border-solid border-black grid grid-cols-5">
+      <nav className="border-b-2 border-solid border-[#CECECE] grid grid-cols-5">
         <ul className="flex justify-end col-span-3">
           {props.otherPages.map((page) => (
             <Link href={page.link} key={page.name}>
-              <li className="px-5 py-4">{page.name}</li>
+              <li
+                className={
+                  "px-5 py-2 border-[#CECECE]" +
+                  (page.active ? " border-b-4" : "")
+                }
+              >
+                {page.name}
+              </li>
             </Link>
           ))}
         </ul>

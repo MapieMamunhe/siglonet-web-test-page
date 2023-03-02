@@ -85,8 +85,10 @@ export function OrderInfoComponent(props: props) {
                   </caption>
                 </TableCell>
                 <TableCell>
-                  <div className="flex justify-end">
-                    <span>R:00000</span>
+                  <div className="flex justify-end ">
+                    <span className="font-bold text-sm text-black">
+                      R:00000
+                    </span>
                   </div>
                 </TableCell>
               </TableRow>
