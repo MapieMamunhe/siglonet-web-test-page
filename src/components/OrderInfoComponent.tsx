@@ -12,7 +12,7 @@ type props = {
   mainInfo: any[];
   products: any[];
 };
-export function OrderInfoComponent(props: props) {
+export default function OrderInfoComponent(props: props) {
   return (
     <section id="hero" className="bg-[#F4F6F6] p-5 h-full">
       <div className="bg-white px-5">
@@ -24,7 +24,12 @@ export function OrderInfoComponent(props: props) {
             "
         >
           <span>Order Info</span>
-          <select className="border-2 px-6 rounded" name="status" id="status">
+          <select
+            title="status"
+            className="border-2 px-6 rounded"
+            name="status"
+            id="status"
+          >
             <option value="">Status</option>
           </select>
         </div>

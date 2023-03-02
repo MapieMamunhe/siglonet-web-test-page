@@ -10,7 +10,7 @@ type props = {
   setSearch: (arg0: string) => void;
   orders: any[];
 };
-export function SearchOrdersComponent(props: props) {
+export default function SearchOrdersComponent(props: props) {
   return (
     <section className="flex flex-col">
       <div className="flex my-3 ml-4">
@@ -38,6 +38,7 @@ export function SearchOrdersComponent(props: props) {
             htmlColor="#CECECE"
             className="border border-1 h-10 w-10 rounded-md"
           />
+          {""}
         </button>
       </div>
       <ul className="flex flex-col ">

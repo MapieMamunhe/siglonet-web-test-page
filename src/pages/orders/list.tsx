@@ -5,9 +5,9 @@ import { CalendarMonth, Place, Tag, Functions, Add } from "@mui/icons-material";
 import InputField from "@/components/InputField";
 import TextField from "@mui/material/TextField";
 import { randomUUID } from "crypto";
-import { OrderInfoComponent } from "../../components/OrderInfoComponent";
-import { SearchOrdersComponent } from "../../components/SearchOrdersComponent";
-import { NavLinksComponent } from "./NavLinksComponent";
+import OrderInfoComponent from "../../components/OrderInfoComponent";
+import SearchOrdersComponent from "../../components/SearchOrdersComponent";
+import NavLinksComponent from "./NavLinksComponent";
 
 const OrdersList: React.FC = () => {
   const [otherPages, setOtherPages] = useState([
