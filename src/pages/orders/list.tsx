@@ -105,7 +105,7 @@ const OrdersList: React.FC = () => {
           <section className="font-bold flex justify-between py-5 ">
             <p className="">Order Notes</p>
             <Link href="/">
-              <span className="border-2 border-black rounded-md p-2">
+              <span className="border-2 border-black rounded-md p-2 hover:bg-[#37404F] hover:text-white">
                 <Add /> New Order Note
               </span>
             </Link>

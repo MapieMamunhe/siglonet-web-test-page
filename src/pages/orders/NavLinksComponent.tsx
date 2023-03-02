@@ -12,7 +12,7 @@ export function NavLinksComponent(props: props) {
               <li
                 className={
                   "px-5 py-2 border-[#CECECE]" +
-                  (page.active ? " border-b-4" : "")
+                  (page.active ? " border-b-4 " : " text-[#9098A6]")
                 }
               >
                 {page.name}
