@@ -3,6 +3,7 @@ import { Search, Sort } from "@mui/icons-material";
 import Input from "@mui/material/Input";
 import { TextField } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
+import { randomBytes } from "crypto";
 
 // import { Container } from './styles';
 type props = {
@@ -33,19 +34,15 @@ export default function SearchOrdersComponent(props: props) {
           }}
         />
 
-        <button type="button" className="">
-          <Sort
-            htmlColor="#CECECE"
-            className="border border-1 h-10 w-10 rounded-md"
-          />
-          {""}
+        <button type="button" className="h-10 w-12 border border-1 rounded-md">
+          <Sort htmlColor="#CECECE" className="" />
         </button>
       </div>
       <ul className="flex flex-col ">
         {props.orders.map((order) => {
           return (
             <button
-              key={order.value}
+              key={randomBytes(4).toString("hex")}
               type="button"
               className=" hover:bg-[#37404F] 
               border-t-2 border-[#E4E4E4] 
