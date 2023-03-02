@@ -1,6 +1,7 @@
 import React from "react";
 import { Search, Sort } from "@mui/icons-material";
 import Input from "@mui/material/Input";
+import { TextField } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 
 // import { Container } from './styles';
@@ -12,36 +13,42 @@ type props = {
 export function SearchOrdersComponent(props: props) {
   return (
     <section className="flex flex-col">
-      <div className="flex my-4 ml-4">
-        <Input
-          id="input-with-icon-adornment"
+      <div className="flex my-3 ml-4">
+        <TextField
+          id="outlined-search"
+          label="Search"
+          type="search"
+          className="mr-2"
+          size="small"
           value={props.search}
-          className="w-3/4 mr-auto border-2 border-[#CECECE] border-solid rounded-md"
           onChange={(e) => {
             props.setSearch(e.currentTarget.value);
           }}
-          endAdornment={
-            <InputAdornment position="start">
-              <Search htmlColor="#CECECE" />
-            </InputAdornment>
-          }
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="start">
+                <Search htmlColor="#CECECE" />
+              </InputAdornment>
+            ),
+          }}
         />
+
         <button type="button" className="">
           <Sort
             htmlColor="#CECECE"
-            className="border border-1 h-12 w-12 rounded-md"
+            className="border border-1 h-10 w-10 rounded-md"
           />
         </button>
       </div>
-      <ul className="flex flex-col">
+      <ul className="flex flex-col ">
         {props.orders.map((order) => {
           return (
             <button
               key={order.value}
               type="button"
-              className="hover:bg-[#37404F] 
-              border-t-2 border-[#E4E4E4]
-              font-sans py-5 hover:text-white
+              className=" hover:bg-[#37404F] 
+              border-t-2 border-[#E4E4E4] 
+              font-sans py-5 hover:text-white pl-4
                         hover:font-light"
             >
               <li>
