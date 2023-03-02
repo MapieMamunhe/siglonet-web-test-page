@@ -3,3 +3,4 @@ export type navLinkProps = {
   link: string;
   active: boolean;
 };
+export {};
